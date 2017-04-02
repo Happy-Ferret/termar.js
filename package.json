@@ -1,0 +1,22 @@
+{
+  "name": "termar",
+  "version": "0.0.1",
+  "description": "Manages your application's command-line interface",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "./node_modules/.bin/qunit tests/*-t.js",
+    "lint": "./node_modules/.bin/eslint **/*.js"
+  },
+  "keywords": [
+    "CLI",
+    "js",
+    "command-line",
+    "command"
+  ],
+  "author": "Mohamed Hadjoudj",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "qunit": "^1.0.0"
+  }
+}

@@ -14,7 +14,7 @@
     "command"
   ],
   "author": "Mohamed Hadjoudj",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^3.19.0",
     "qunit": "^1.0.0"

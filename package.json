@@ -2,10 +2,12 @@
   "name": "termar",
   "version": "0.0.1",
   "description": "Manages your application's command-line interface",
-  "main": "src/main.js",
+  "main": "src/lib.js",
   "scripts": {
     "test": "./node_modules/.bin/qunit tests/*-t.js",
-    "lint": "./node_modules/.bin/eslint **/*.js"
+    "start": "node ./example/main.js -s moha",
+    "lint": "./node_modules/.bin/eslint **/*.js",
+    "lint:fix": "./node_modules/.bin/eslint **/*.js --fix"
   },
   "keywords": [
     "CLI",

@@ -57,6 +57,9 @@ const TCommand = function (options) {
         get description () {
             return description
         },
+        get name () {
+            return name
+        },
         get required () {
             return required
         },
@@ -84,6 +87,7 @@ const TCommand = function (options) {
 
 TCommand.isValid = com => {
     return typeof com.description === "string"
+    && typeof com.name === "string"
     && typeof com.required === "boolean"
     && typeof com.shortcut === "string"
     && Array.isArray (com.aliases)

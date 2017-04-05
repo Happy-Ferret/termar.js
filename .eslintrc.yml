@@ -40,8 +40,8 @@ rules:
   eol-last: [error, always]
   func-call-spacing: [warn, always]
   func-names: [warn, never]
-#  max-lines: [warn, { skipBlankLines: true, skipBlankComments: true }]
-  max-len: [warn, 80, { ignoreStrings: true }]
+  max-lines: [warn, { skipBlankLines: true, skipComments: true }]
+  max-len: [warn, 100, { ignoreStrings: true }]
   newline-after-var: [warn, always]
   no-mixed-spaces-and-tabs: warn
   no-multiple-empty-lines: warn

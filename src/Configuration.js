@@ -8,8 +8,8 @@ const TConfiguration = function (conf) {
         help,
     } = defaults (conf, {
         errorOnUndefinedArgument: false,
-        undefMessage: opt => console.log (`undefined option ${opt}`),
-        noArgMessage: opt => console.log (`${opt} does not take arguments`),
+        undefMessage: opt => (`undefined option ${opt}`),
+        noArgMessage: opt => (`${opt} does not take arguments`),
         help: true,
     })
 

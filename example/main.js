@@ -2,8 +2,7 @@ const { Termar, TCommand, TConfiguration } = require ("../src/lib.js")
 const cli = Termar ()
 
 cli.configuration = TConfiguration ({
-    help: false,
-
+    errorOnUndefinedArgument: true,
 })
 cli.defaultCallback = e => {
     if (e.slice (-3) === ".js") return 
@@ -20,7 +19,7 @@ cli.addCommand (TCommand ({
     name: "sayhello",
     aliases: ["hello"],
     shortcut: "s",
-    callback: arg => console.log ("hello " + arg),
+    callback: (arg = "") => console.log ("hello " + arg),
     description: "Says hello to the name given",
     howto: "-s [arg...]",
 }))

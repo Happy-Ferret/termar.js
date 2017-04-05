@@ -5,7 +5,6 @@
   "main": "src/lib.js",
   "scripts": {
     "test": "./node_modules/.bin/qunit tests/*-t.js",
-    "start": "node ./example/main.js -s moha",
     "lint": "./node_modules/.bin/eslint **/*.js",
     "lint:fix": "./node_modules/.bin/eslint **/*.js --fix"
   },

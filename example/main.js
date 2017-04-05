@@ -4,8 +4,8 @@ const cli = Termar ()
 cli.configuration = TConfiguration ({
     errorOnUndefinedArgument: true,
 })
-cli.defaultCallback = e => {
-    if (e.slice (-3) === ".js") return 
+cli.defaultCallback = alone => {
+    if (!alone) return 
     let randomName = ""
     const length = Math.floor (Math.random () * 7 + 3)
     const chars = "abcdefghijklmnopqrstuvwxyz"
@@ -13,7 +13,7 @@ cli.defaultCallback = e => {
     for (let i = 0; i < length; i++) {
         randomName += chars [Math.floor (Math.random () * (chars.length + 1))]
     }
-    console.log ("Is your name : " + randomName[0].toUpperCase () + randomName.slice (1))
+    console.log ("Is your name " + randomName[0].toUpperCase () + randomName.slice (1) + " ?")
 }
 cli.addCommand (TCommand ({
     name: "sayhello",

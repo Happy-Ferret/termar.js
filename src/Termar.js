@@ -41,7 +41,7 @@ const Termar = function(argv) {
                 if (argv[i].startsWith ("-")) {
                     if (!o) {
                         o = true
-                        defaultCallback.apply (null, defaultArgs)
+                        defaultCallback.apply (null, [false].concat (defaultArgs))
                     }
                     argv[i] = argv[i].slice (1)
                     if (argv[i].startsWith ("-")) {
@@ -72,7 +72,7 @@ const Termar = function(argv) {
 
                             if (command === undefined) {
                                 if (configuration.errorOnUndefinedArgument) {
-                                    const e = configuration.undefMessage (argv[i])
+                                    const e = configuration.undefMessage ("-" + opt)
                                     
                                     throw new Error (`Termar:  ${e}`)
                                 }
@@ -92,6 +92,7 @@ const Termar = function(argv) {
                 } else if (configuration.errorOnUndefinedArgument)
                     throw new Error ("Termar: " + configuration.undefMessage (argv[i]))
             }
+            if (!o) defaultCallback.apply (null, [true].concat (defaultArgs))
         },
         addCommand (com) {
             if (TCommand.isValid (com)) {
